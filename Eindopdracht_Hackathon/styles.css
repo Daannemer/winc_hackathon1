@@ -1,0 +1,269 @@
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+  height: 95%;
+  background-color: rgb(231, 233, 235);
+}
+
+ul {
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(40, 42, 53);
+  margin: 0px;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: right;
+  font-style: italic;
+  color: rgb(4, 170, 109);
+  margin: 0px 0px 0px 0px;
+}
+
+.main_text {
+  text-decoration: underline;
+}
+
+.container {
+  height: 95%;
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 50px 16fr 50px;
+  grid-template-areas:
+    "h h h h h h h h h h h h "
+    "n n n n n n n n n n n n "
+    "c c c c c c c c c c c c "
+    "a a a a a a a a a a a f ";
+}
+
+.header {
+  grid-area: h;
+  color: rgb(40, 42, 53);
+  border: 3px solid rgb(40, 42, 53);
+  border-radius: 10px;
+  padding-bottom: 0px;
+  color: rgb(4, 170, 109);
+  background-color: #ffffff;
+  padding: 10px 10px;
+}
+
+.nav {
+  grid-area: n;
+  background-color: rgb(40, 42, 53);
+  border: 3px solid rgb(40, 42, 53);
+  border-radius: 10px;
+}
+
+.main {
+  grid-area: c;
+  color: rgb(40, 42, 53);
+  background-color: rgb(231, 233, 235);
+  border: 3px solid rgb(40, 42, 53);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.text_link {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(40, 42, 53);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main_list {
+  padding-left: 30px;
+  list-style: square;
+}
+
+.img {
+  width: 50%;
+  height: auto;
+  margin-top: 30px;
+  float: right;
+}
+
+.footer {
+  grid-area: f;
+  color: rgb(40, 42, 53);
+  text-align: left;
+  padding: 10px;
+  font-size: 10px;
+}
+
+.aside {
+  grid-area: a;
+  color: rgb(40, 42, 53);
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  align-items: baseline;
+  background-color: rgb(4, 170, 109);
+  border: 3px solid rgb(40, 42, 53);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.nav_bar {
+  font-size: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_tab {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.nav_link {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #e7e9eb;
+  text-decoration: none;
+}
+
+.form_left {
+  display: flex;
+  flex: 50%;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.form_right {
+  display: flex;
+  flex: 50%;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 10px;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 50%;
+  padding-top: 50px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100px 150px 3fr 120px 100px;
+    grid-template-areas:
+      "h h h h h h h h h h "
+      "n c c c c c c c c . "
+      ". c c c c c c c c . "
+      "a c c c c c c c c . "
+      ". . . . . . . . f . ";
+  }
+
+  .header {
+    grid-area: h;
+  }
+
+  .nav {
+    grid-area: n;
+  }
+
+  .nav_bar {
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+
+  .main {
+    grid-area: c;
+  }
+
+  .img {
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    float: right;
+  }
+  .footer {
+    grid-area: f;
+  }
+
+  .aside {
+    grid-area: a;
+    text-align: center;
+  }
+
+  @media (min-width: 1312px) {
+    .container {
+      height: 100%;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-rows: 100px 150px 3fr 120px 100px;
+      grid-template-areas:
+        ". h h h h h h h h h . "
+        ". n c c c c c c c a . "
+        ". . c c c c c c c a . "
+        ". . c c c c c c c a . "
+        ". . . . . . . . f f . ";
+    }
+
+    .header {
+      grid-area: h;
+    }
+
+    .nav {
+      grid-area: n;
+    }
+
+    .main {
+      grid-area: c;
+    }
+
+    .img {
+      width: 60%;
+      height: auto;
+      margin: 25px;
+    }
+    .footer {
+      grid-area: f;
+    }
+
+    .aside {
+      grid-area: a;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
